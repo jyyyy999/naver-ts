@@ -1,0 +1,24 @@
+{
+  "discord_webhook_url": "",
+  "restock_mention": "@everyone",
+  "new_product_mention": "@everyone",
+  "check_interval_seconds": 10,
+  "category_interval_seconds": 13,
+  "interval_jitter_ratio": 0.05,
+  "delay_between_products_seconds": 1,
+  "error_notify_after": 3,
+  "category_page_size": 20,
+  "max_new_product_notify": 20,
+  "products": [
+    "https://smartstore.naver.com/pokemontcg/products/13763157937",
+    "https://smartstore.naver.com/moncolle_korea/products/13763561200"
+  ],
+  "categories": [
+    "https://smartstore.naver.com/pokemontcg/category/d0c0dbc072f34aa5bfb50edfc6210441?cp=1",
+    "https://smartstore.naver.com/pokemontcg/category/fd366c3b60ad435787dd16183d1cfe47?st=RECENT&dt=IMAGE&page=1&size=40",
+    "https://smartstore.naver.com/moncolle_korea/category/30izlw7gMr2M1YTvIbF8s_ALL_PRODUCT?st=RECENT&dt=BIG_IMAGE&page=1&size=40"
+  ],
+  "buy": {
+    "pg_password": ""
+  }
+}

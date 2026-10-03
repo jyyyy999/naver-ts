@@ -1,0 +1,37 @@
+{
+  "name": "smartstore-stock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "네이버 스마트스토어 / 브랜드스토어 재고·신상품 감시 → 디스코드 알림 + 열리면 바로구매 (주문서·결제하기·간편결제 비밀번호까지) · G마켓 바로구매 (src/gmarket, .\\gm — puppeteer-extra + Stealth)",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "watch": "tsx src/cli.ts --watch",
+    "link": "tsx src/cli.ts --link",
+    "buy": "tsx src/cli.ts --buy",
+    "dump-pay": "tsx src/cli.ts --dump-pay",
+    "whoami": "tsx src/cli.ts --whoami",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "gm": "tsx src/gmarket/cli.ts",
+    "gm:login": "tsx src/gmarket/cli.ts --login",
+    "gm:whoami": "tsx src/gmarket/cli.ts --whoami",
+    "gm:status": "tsx src/gmarket/cli.ts --status",
+    "gm:link": "tsx src/gmarket/cli.ts --link",
+    "gm:drop": "tsx src/gmarket/cli.ts --drop"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "1.63.0",
+    "puppeteer": "^25.12.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

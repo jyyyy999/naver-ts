@@ -1,0 +1,11 @@
+node_modules
+dist
+
+# 설정·상태·로그는 이 폴더 밖(../)에 두지만, 혹시 안으로 들어와도 안 올린다.
+# 씨앗 설정은 비밀값을 비운 smartstore_config.example.json 만 올린다.
+*_config.json
+*_state*.json
+*_session.json
+*.log
+*-dump.txt
+.env
