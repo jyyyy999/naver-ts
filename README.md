@@ -4,18 +4,40 @@
 
 > 같은 폴더에 **G마켓 바로구매**(`src/gmarket/`, `.\gm`)가 같이 산다 — [README-gmarket.md](README-gmarket.md).
 
-## 준비
+## 처음 받았을 때 (새 PC)
+
+Node 20 이상이 필요합니다. 설정·로그인 세션·상태·로그는 **저장소 폴더 바깥, 한 단계 위(`../`)** 에 둡니다
+(비밀값이 저장소에 섞이지 않게 하려는 것이고, 데스크톱 앱도 이 자리를 봅니다). 그래서 빈 폴더 안에 `ts` 로 받습니다.
 
 ```bash
+mkdir naver
+cd naver
+git clone https://github.com/jyyyy999/naver-ts.git ts
 cd ts
 npm install
+npm run setup
 ```
 
-브라우저는 Python 쪽에 이미 설치된 Chromium 을 그대로 씁니다. 로그인 세션도 같은 파일이라 **이미 `--login` 을 했다면 다시 할 필요 없습니다.** 처음이면:
+`npm run setup` 은 `smartstore_config.example.json` 을 `../smartstore_config.json` 으로 복사합니다 (이미 있으면 그대로 둡니다).
+그 파일에 `discord_webhook_url`·`products`·`buy` 를 채운 뒤 로그인합니다 (창이 뜨면 직접 로그인 → `../naver_session.json` 에 저장).
 
 ```bash
-npm start -- --login
+.\ss --login
+.\ss --whoami
+.\ss --watch
 ```
+
+```
+naver/
+├── smartstore_config.json      설정 (npm run setup 이 만든다)
+├── naver_session.json          로그인 세션 (--login 이 적는다)
+├── smartstore_state.ts.json    상태
+├── smartstore-ts.log           로그
+└── ts/                         ← 이 저장소
+```
+
+브라우저는 따로 받지 않아도 됩니다 — 번들 Chromium 이 없으면 설치된 Chrome → Edge 로 띄웁니다 ([문제 해결](#문제-해결)).
+Python 판과 같은 파일을 쓰므로 **이미 `--login` 을 했다면 다시 할 필요 없습니다.**
 
 ## 실행
 
@@ -35,7 +57,7 @@ npm start -- --once --dry-run
 npm start -- --watch
 ```
 
-루트의 `run-smartstore-ts.bat` 을 더블클릭해도 됩니다. 전체 옵션은 `.\ss --help` (파워셸에서 `npm start -- --help` 는 npm 도움말이 뜹니다).
+전체 옵션은 `.\ss --help` (파워셸에서 `npm start -- --help` 는 npm 도움말이 뜹니다).
 
 | 스크립트 | 설명 |
 |---|---|

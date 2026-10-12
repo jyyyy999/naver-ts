@@ -5,6 +5,7 @@
   "type": "module",
   "description": "네이버 스마트스토어 / 브랜드스토어 재고·신상품 감시 → 디스코드 알림 + 열리면 바로구매 (주문서·결제하기·간편결제 비밀번호까지) · G마켓 바로구매 (src/gmarket, .\\gm — puppeteer-extra + Stealth)",
   "scripts": {
+    "setup": "node setup.mjs",
     "start": "tsx src/cli.ts",
     "watch": "tsx src/cli.ts --watch",
     "link": "tsx src/cli.ts --link",
